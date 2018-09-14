@@ -20,7 +20,7 @@
 </style>
 
 		<meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="93m1JBjCzszMqV0vk/ldr6dSeufiDQrbSr+a+X0qD5swygVJIT7PkSlbOmEgJi5xmKrG0alunx/MikgKAZ5o8g==" />
+<meta name="csrf-token" content="opt7gBDeR0zFHS+C3zahdEXf02YpVTDlVob8e696NVdlKMvtKSJGESDvSMxs6dKqeidvUGI2pSHQsy6I085SPg==" />
 		<style id="user-css-output" type="text/css"></style>
 	</head>
 	<body>
@@ -167,7 +167,7 @@ organization_sizes = {'HCOM': 100, 'EAN': 500, 'BEX': 1000}
 # org_name will be the name of the organization in this case
 for org_name in organization_sizes:
     size = organization_sizes[org_name]
-    text = org_name + ': ' + size
+    text = org_name + ': ' + str(size)
     print(text)
 </code></pre></div></div></section><section data-id="2e2378caadb75a0f7c87192a97d98930"><div class="sl-block" data-block-type="text" style="width: 806px; left: 77px; top: 42px; height: auto;" data-block-id="38a21a5ccf844f82dcda85227ef96ec8"><div class="sl-block-content" data-placeholder-tag="h2" data-placeholder-text="Title Text" style="z-index: 10;">
 <h2>Dictionaries</h2>
@@ -176,8 +176,8 @@ for org_name in organization_sizes:
 <div class="sl-block" data-block-type="text" style="height: auto; width: 803px; left: 80px; top: 140px;" data-block-id="f39f7127cb879ddfab9ace97ff91af15"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" data-gramm_id="dcfa64b2-bf6b-5b2b-aac4-4c88022783a2" data-gramm="true" data-gramm_editor="true">
 <p style="text-align:left">Dictionaries combined with lists allows you to create very dynamic and efficient representations of data:</p>
 </div></div>
-<div class="sl-block" data-block-type="code" style="width: 800px; height: 409px; left: 77px; top: 237px;" data-block-id="2e67a2eb526ce28d8237a837c5eab4c7"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 70%;" data-highlight-theme="zenburn"><pre class="python"><code># A list with three dicts inside it, each dict representing an organization
-organizations = [
+<div class="sl-block" data-block-type="code" style="width: 800px; height: 409px; left: 77px; top: 237px;" data-block-id="2e67a2eb526ce28d8237a837c5eab4c7"><div class="sl-block-content notranslate" style="z-index: 12; font-size: 70%;" data-highlight-theme="zenburn"><pre class="python"><code># A dict with three dicts inside it, each dict representing an organization
+organizations = {
     'hcom': {
         'name': 'Hotel.com',
         'size': 100,
@@ -194,12 +194,13 @@ organizations = [
         'departments': ['Product', 'AM']
     }
 
-]
+}
 
 # Using a for loop on this list, the loop variable organization will be a dict
 full_size = 0
-for org in organizations:
-    full_size = full_size + org['size']
+for org_name in organizations:
+    organization = organizations[org_name]
+    full_size = full_size + organization['size']
 
 
 # Full size of all our organizations
@@ -266,7 +267,7 @@ print(role_of_johan)
 
 		
 <script>
-	var SLConfig = {"current_user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null},"email":"jnilsson@hotels.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":13959,"storage_limit":262144000},"deck":{"id":1323268,"slug":"python-101python-101-2-4","title":"Python 101 - 5","description":"","width":960,"height":700,"visibility":"all","published_at":"2018-09-10T09:31:09.188Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/cfb8472291651e7e90cb4155905c52a0/thumb.jpg?1536571890","view_count":0,"user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":11,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1536759324516,"font_typekit":null,"font_google":null,"notes":{}},"user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
+	var SLConfig = {"current_user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null,"editor_grid":true,"editor_snap":true,"editor_fixed_notes":false,"developer_mode":false,"speaker_layout":null,"phone_number":null,"phone_country_code":null,"media_sources":null,"export_controls":null,"export_slide_number":null,"export_slide_notes":null,"export_separate_fragments":null},"email":"jnilsson@hotels.com","notify_on_receipt":true,"billing_address":null,"billing_vat_id":null,"editor_tutorial_completed":true,"manually_upgraded":false,"deck_user_editor_limit":1,"storage_used":13959,"storage_limit":262144000},"deck":{"id":1323268,"slug":"python-101python-101-2-4","title":"Python 101 - 5","description":"","width":960,"height":700,"visibility":"all","published_at":"2018-09-10T09:31:09.188Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/cfb8472291651e7e90cb4155905c52a0/thumb.jpg?1536571890","view_count":1,"user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}},"background_transition":"slide","transition":"slide","theme_id":null,"theme_font":"montserrat","theme_color":"white-blue","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":true,"rolling_links":false,"center":false,"shuffle":null,"should_loop":false,"share_notes":null,"slide_number":null,"slide_count":11,"rtl":false,"version":2,"collaborative":false,"deck_user_editor_limit":1,"data_updated_at":1536896312531,"font_typekit":null,"font_google":null,"notes":{}},"user":{"id":913273,"username":"hk101teach","name":"HK","description":"","thumbnail_url":"https://www.gravatar.com/avatar/46914f961ed60533089efcc5d1525b5f?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":false,"pro":false,"lite":false,"team_id":null,"settings":{"id":1680526,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":true,"default_deck_tag_id":null}}};
 </script>
 
 		<script>
